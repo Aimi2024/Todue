@@ -1,0 +1,52 @@
+@import "bootstrap/scss/functions";
+
+// Custom Theme Colors
+$theme-colors: (
+  "primary": #0d6efd,
+  "secondary": #6c757d,
+  "success": #198754,
+  "danger": #dc3545,
+  "warning": #ffc107,
+  "info": #0dcaf0,
+  "light": #f8f9fa,
+  "dark": #212529,
+
+  // Custom colors
+  "skyblue": #87ceeb,
+  "neongreen": #39ff14,
+  "green": #3f7d58,
+  "orange": #ef9651,
+  "white": #FAF1E6,
+);
+
+// Extend Bootstrap utilities to support custom theme colors
+$utilities: map-merge(
+  (
+    "background-color": (
+      property: background-color,
+      class: bg,
+      values: $theme-colors,
+    ),
+    "color": (
+      property: color,
+      class: text,
+      values: $theme-colors,
+    ),
+    "border-color": (
+      property: border-color,
+      class: border,
+      values: $theme-colors,
+    ),
+  ),
+  ()
+);
+
+// Optional: Add custom button variants (btn-orange, btn-neongreen, etc.)
+$custom-theme-colors: (
+  "orange": #ef9651,
+  "neongreen": #39ff14,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+@import "bootstrap/scss/bootstrap";
