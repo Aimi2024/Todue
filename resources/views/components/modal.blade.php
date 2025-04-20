@@ -16,7 +16,7 @@
             </div>
 
             <div class="modal-footer bg-green">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary btn-danger" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save Task</button>
             </div>
         </div>

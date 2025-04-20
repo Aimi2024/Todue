@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TaskRequest;
 use App\Models\task;
 use Illuminate\Http\Request;
 
@@ -10,9 +11,11 @@ class TaskController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(TaskRequest $request)
     {
-        
+        $task = $request->validated();
+
+        $task->withRelationshipAutoLoading();
     }
 
     /**
