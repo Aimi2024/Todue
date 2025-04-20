@@ -5,7 +5,7 @@
 
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="bg-green rounded-4 p-5" style="max-width: 450px; width: 100%;">
-            <h1 class="text-center text-white fw-bold mb-2">ToDue</h1>
+            <h1 class="text-center text-white fw-bold mb-2">Sign In</h1>
 
             <form>
                 <div class="mb-3">
@@ -23,7 +23,7 @@
 
                     <p class="text-white mb-0">
                         Don't have an account? <br>
-                        <a href="#" class="text-white text-decoration-underline">Sign Up</a>
+                        <a href="{{ route('signup') }}" class="text-white text-decoration-underline">Sign Up</a>
                     </p>
                 </div>
             </form>
